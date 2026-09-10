@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dipak Munshi</title>
+<meta name="description" content="Dipak Munshi — research scientist, Imperial College London. Statistical methods for large, noisy, instrument-limited data: satellite RFI mitigation, Planck, Euclid.">
+<meta name="author" content="Dipak Munshi">
+
+<!-- ===================================================================
+     A deliberately simple single page.  Everything is in this one file:
+     no images, no frameworks, no build step.  To change something, edit
+     the HTML below; to change how it looks, edit the CSS in this block.
+
+     Sections, in order:   header · profile · current · positions ·
+                           skills · publications · footer
+     Each is marked with a comment so you can find it.
+     =================================================================== -->
+
+<style>
+:root{
+  --bg:#ffffff; --ink:#123a7a; --muted:#4a68a8; --rule:#d5deef;
+  --accent:#0b4fc4;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+/* White background and blue text everywhere, including on machines set to
+   dark mode -- so the dark-mode override that was here has been removed on
+   purpose.  Put it back if you ever want the page to follow the reader's
+   system setting. */
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--sans); font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:46rem; margin:0 auto; padding:0 1.4rem 5rem}
+a{color:var(--accent); text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+
+/* ---------- header ---------- */
+header{padding:4.5rem 0 2.2rem}
+h1{
+  color:#0a2f6e;
+  font-family:var(--serif); font-weight:600; letter-spacing:-.02em;
+  font-size:clamp(2.4rem,7vw,3.4rem); line-height:1.05; margin:0 0 .6rem;
+}
+.tagline{
+  font-family:var(--serif); font-size:1.15rem; color:var(--muted);
+  max-width:32ch; margin:0 0 1.4rem;
+}
+.where{font-size:.86rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted)}
+
+/* ---------- sections ---------- */
+section{border-top:1px solid var(--rule); padding:2.2rem 0 .6rem}
+h2{
+  color:#0a2f6e;
+  font-family:var(--serif); font-weight:600; font-size:1.45rem;
+  margin:0 0 1rem; letter-spacing:-.01em;
+}
+h3{color:#0a2f6e; font-size:1rem; font-weight:600; margin:1.6rem 0 .2rem}
+p{margin:0 0 1rem}
+
+/* ---------- positions ---------- */
+.role{margin:0 0 1.5rem}
+.role .place{color:var(--muted)}
+.role .when{
+  display:block; font-size:.82rem; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--muted); margin:.15rem 0 .4rem;
+}
+.role p{margin:0; font-size:.96rem}
+
+/* ---------- skills ---------- */
+dl{margin:0}
+dt{color:#0a2f6e; font-weight:600; margin:1.1rem 0 .15rem; font-size:.95rem}
+dd{margin:0; color:var(--muted); font-size:.95rem}
+
+/* ---------- publications ---------- */
+ol.pubs{margin:0; padding-left:1.3rem}
+ol.pubs li{margin:0 0 1.1rem}
+ol.pubs .title{font-style:italic}
+ol.pubs .cite{color:var(--muted); font-size:.92rem}
+
+footer{
+  border-top:1px solid var(--rule); margin-top:2.4rem; padding-top:1.4rem;
+  color:var(--muted); font-size:.9rem;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- =============== header =============== -->
+<header>
+  <h1>Dipak Munshi</h1>
+  <p class="tagline">I pull faint signals out of large, noisy,
+    instrument-limited data — and build the code that does it at scale.</p>
+  <p class="where">Imperial College London · London, UK</p>
+</header>
+
+<!-- =============== profile =============== -->
+<section>
+  <h2>Profile</h2>
+  <p>Research scientist with nearly 30 years extracting faint signals from
+    large, noisy, instrument-limited datasets, 25 of them in the UK. Core team
+    member on two ESA flagship satellite missions — <strong>Planck</strong> and
+    <strong>Euclid</strong> — where I built, tested and integrated analysis
+    pipelines, including the end-to-end validation required before release to
+    real survey data.</p>
+  <p>I work across the full stack: deriving the method, implementing it in
+    performant code, and running it at scale on HPC and GPU. Around 200
+    peer-reviewed papers.</p>
+</section>
+
+<!-- =============== current work =============== -->
+<section>
+  <h2>Current work</h2>
+  <p>A complete Bayesian treatment of satellite radio-frequency interference
+    in radio interferometry: instrument and beam modelling, orbit determination
+    from interferometric visibilities, detection of uncatalogued emitters,
+    optimal scheduling, and quantified science impact — delivered as
+    self-contained technical reports with reproducible code.</p>
+  <p>Satellite constellations are now the limiting systematic for low-frequency
+    radio astronomy, and unintended broadband emission from spacecraft
+    electronics falls inside the SKA-Low band while being covered by no
+    spectrum allocation at all. Flagging throws the data away; the work here is
+    on modelling the interference and subtracting it instead.</p>
+</section>
+
+<!-- =============== positions =============== -->
+<section>
+  <h2>Positions</h2>
+
+  <div class="role">
+    <h3>Advanced Research Fellow <span class="place">— Imperial College London</span></h3>
+    <span class="when">May 2025 — present</span>
+    <p>Bayesian methods to detect, localise and subtract satellite interference
+      in radio-telescope data. Built an end-to-end inference pipeline, and
+      benchmarked a ladder of inference methods — from Fisher forecasts to
+      simulation-based inference — on cost and accuracy.</p>
+  </div>
+
+  <div class="role">
+    <h3>Research Associate, Machine Learning &amp; AI <span class="place">— UCL Mullard Space Science Laboratory</span></h3>
+    <span class="when">Jan — Mar 2025</span>
+    <p>Extended a GPU-accelerated, automatically differentiable
+      spherical-transform library to new sampling schemes for the Isambard-AI
+      national facility, with automated testing, CI/CD and auto-deployed
+      documentation.</p>
+  </div>
+
+  <div class="role">
+    <h3>Advanced Research Fellow / Research Fellow <span class="place">— Imperial College London &amp; UCL MSSL</span></h3>
+    <span class="when">2017 — 2024</span>
+    <p>Coordinator of the Magnification and Forward Modelling work package in
+      the Euclid Consortium: algorithms from derivation through numerical
+      implementation to pipeline integration and cross-team verification.</p>
+  </div>
+
+  <div class="role">
+    <h3>Research Fellow / Postdoctoral Research Associate <span class="place">— University of Sussex</span></h3>
+    <span class="when">2013 — 2017</span>
+    <p>STFC named fellowship, awarded 2013 and extended 2016. Lectured MSc
+      modules and served on MSc and PhD admissions panels.</p>
+  </div>
+
+  <div class="role">
+    <h3>Research Associate, Planck Core Team <span class="place">— Institute of Astronomy, University of Cambridge</span></h3>
+    <span class="when">2000 — 2008</span>
+    <p>Statistical methods and the Fortran/MPI implementations behind them;
+      testing, integration and end-to-end validation of mission data products,
+      ported to international HPC facilities including NERSC.</p>
+  </div>
+
+  <div class="role">
+    <h3>Earlier</h3>
+    <span class="when">1996 — 2013</span>
+    <p>Cardiff (2009–2013), Edinburgh (2008–2009), Max-Planck-Institut für
+      Astrophysik as a Humboldt Fellow (1999–2000), SISSA Trieste (1998–1999)
+      and Queen Mary &amp; Westfield College London (1996–1998).</p>
+  </div>
+</section>
+
+<!-- =============== skills =============== -->
+<section>
+  <h2>What I work with</h2>
+  <dl>
+    <dt>Statistics</dt>
+    <dd>Bayesian hierarchical modelling; MCMC (Hamiltonian, NUTS); nested
+      sampling; variational inference; simulation-based inference; Fisher
+      forecasting and optimal experimental design; optimal data compression.</dd>
+
+    <dt>Machine learning</dt>
+    <dd>PyTorch, TensorFlow/Keras, JAX; neural density estimation;
+      physics-informed neural networks; emulators and surrogate models;
+      automatic differentiation; scikit-learn.</dd>
+
+    <dt>Languages</dt>
+    <dd>Python (NumPy, SciPy, pandas, Matplotlib), C, C++17, Fortran 90/95,
+      MATLAB, Mathematica, IDL, SQL.</dd>
+
+    <dt>Scale</dt>
+    <dd>MPI, OpenMP, GPU (JAX/CUDA); NERSC and Cambridge COSMOS HPC user for
+      10+ years; Git/GitHub, CI/CD, pytest, code review.</dd>
+  </dl>
+</section>
+
+<!-- =============== education =============== -->
+<section>
+  <h2>Education and recognition</h2>
+  <div class="role">
+    <h3>Ph.D. Astronomy <span class="place">— IUCAA, Pune</span></h3>
+    <span class="when">1996</span>
+    <p>Formation and evolution of large-scale structure. Supervisor
+      Prof. Varun Sahni, in collaboration with Prof. A. A. Starobinsky.</p>
+  </div>
+  <div class="role">
+    <h3>M.Sc. and B.Sc. Physics <span class="place">— IIT Kharagpur</span></h3>
+    <span class="when">1990, 1992 · first class with distinction</span>
+    <p>M.Sc. in quantum field theory and particle physics.</p>
+  </div>
+  <p>Gruber Cosmology Prize and Group Achievement Award, both to the Planck
+    team. STFC named fellowship 2013–2017. Alexander von Humboldt Fellowship
+    1999–2000. CSIR (India) Research Fellowship 1992–1996.</p>
+</section>
+
+<!-- =============== publications =============== -->
+<section>
+  <h2>Selected publications</h2>
+  <p>Five of roughly two hundred.</p>
+  <ol class="pubs">
+    <li><span class="title">Cosmology with Weak Lensing Surveys.</span><br>
+      D. Munshi, P. Valageas, L. Van Waerbeke, A. Heavens.<br>
+      <span class="cite">Physics Reports <strong>462</strong>, 67–121 (2008)
+      — invited review.</span></li>
+
+    <li><span class="title">The Weak Lensing Bispectrum Induced by Gravity.</span><br>
+      D. Munshi, T. Namikawa, T. D. Kitching, J. D. McEwen, R. Takahashi,
+      F. R. Bouchet, A. Taruya, B. Bose.<br>
+      <span class="cite">MNRAS <strong>493</strong>, 3985 (2020)</span></li>
+
+    <li><span class="title">Weak Lensing Skew-Spectrum.</span><br>
+      D. Munshi, T. Namikawa, T. D. Kitching, J. D. McEwen, F. R. Bouchet.<br>
+      <span class="cite">MNRAS <strong>498</strong>, 5299 (2020)</span></li>
+
+    <li><span class="title">Morphology of Weak Lensing Convergence Maps.</span><br>
+      D. Munshi, T. Namikawa, J. D. McEwen, T. D. Kitching, F. R. Bouchet.<br>
+      <span class="cite">MNRAS <strong>507</strong>, 1421 (2021)</span></li>
+
+    <li><span class="title">A New Estimator for Phase Statistics.</span><br>
+      D. Munshi, R. Takahashi, J. D. McEwen, T. D. Kitching, F. R. Bouchet.<br>
+      <span class="cite">JCAP <strong>05</strong>, 006 (2022)</span></li>
+  </ol>
+  <p>Full publication list available on request.</p>
+</section>
+
+<!-- =============== footer =============== -->
+<footer>
+  <p>Code at <a href="https://github.com/dipakmunshi87">github.com/dipakmunshi87</a>.
+     Full publication list and references available on request.</p>
+
+  <!-- To add an email, replace the line above with something like:
+       <p>Contact: name [at] institution [dot] ac [dot] uk</p>
+       Writing it out in words rather than as a mailto: link keeps it off
+       the address-harvesting bots that scrape public pages. -->
+</footer>
+
+</div>
+</body>
+</html>
